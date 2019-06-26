@@ -1,0 +1,29 @@
+.table {
+  color: #6D6E7D;
+  border: none;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #222840;
+}
+
+.table td,
+.table th {
+  border: none;
+}
+
+/* .btn {
+  border: 1px solid #57889C;
+} */
+
+.btn-primary {
+  border: 1px solid #F1546D;
+  color: #6D6E7D;
+  background-color: transparent;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 0 0.1rem #F1546D;
+  background-color: #F1546D;
+  color: #fff
+}
