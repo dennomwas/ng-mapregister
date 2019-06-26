@@ -1,0 +1,13 @@
+.form-control {
+  color: #35394F;
+
+  background-color: #222840;
+}
+
+input {
+  height: 3.2em;
+
+  padding: 5px;
+
+  line-height: 5px;
+}
