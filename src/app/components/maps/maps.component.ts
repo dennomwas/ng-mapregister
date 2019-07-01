@@ -17,7 +17,7 @@ export class MapsComponent implements OnInit {
   deleteMapItem: Map;
   // errorMessage: string;
 
-  getMap(id: string) {
+  getMap(id: any) {
     this.mapregisterservice.getOneMap(id)
       .subscribe(response => {
         this.singleMap = response;
@@ -26,7 +26,7 @@ export class MapsComponent implements OnInit {
       });
   }
 
-  deleteMap(id: string) {
+  deleteMap(id: any) {
     this.mapregisterservice.deleteMap(id)
       .subscribe(response => {
         this.deleteMapItem = response;

@@ -1,0 +1,18 @@
+.results-container {
+    padding-bottom: 30px;
+}
+.search-result {
+  margin-bottom: 30px;
+  color: #6D6E7D;
+  padding-top: 10px;
+}
+
+h2 span {
+    text-decoration: underline;
+}
+
+.map-results {
+  border-bottom: 1px solid #6D6E7D;
+  padding: 15px 30px;
+  color: #6D6E7D;
+}

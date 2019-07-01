@@ -1,11 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
-
-  <app-top-nav></app-top-nav>
+<app-top-nav></app-top-nav>
+<div class="col-md-12">
+  <div class="row">
+    <div class="col-md-2 side-nav">
       <app-side-nav></app-side-nav>
-
+    </div>
+    <div class="col-md-10 main-body">
       <app-main-nav></app-main-nav>
-      <!-- <app-maps></app-maps> -->
-    <!-- <app-home></app-home> -->
-
-    <router-outlet></router-outlet>
+      <app-search></app-search>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
 

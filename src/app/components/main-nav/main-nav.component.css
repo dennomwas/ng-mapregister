@@ -98,18 +98,6 @@
 
 }
 
-.info-box.info {
-
-  background: #67c2ef;
-
-  border: 1px solid #39afea;
-
-}
-
-.info-box.success {
-
-  background: #79c447;
-
-  border: 1px solid #61a434;
-
+.info-box {
+  cursor: pointer;
 }

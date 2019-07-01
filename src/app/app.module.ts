@@ -1,34 +1,35 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import  { FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
 import { TopNavComponent } from './components/top-nav/top-nav.component';
 import { MainNavComponent } from './components/main-nav/main-nav.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { SearchComponent } from './components/search/search.component';
-import {  MapsComponent} from './components/maps/maps.component';
+import { MapsComponent } from './components/maps/maps.component';
 import { AddmapComponent } from './components/addmap/addmap.component';
+import { SearchResultsComponent } from './components/search-results/search-results.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     TopNavComponent,
     MainNavComponent,
     SideNavComponent,
     SearchComponent,
     MapsComponent,
-    AddmapComponent
+    AddmapComponent,
+    SearchResultsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

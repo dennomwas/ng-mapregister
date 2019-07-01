@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 // local imports
 import { Map } from '../../models/map-interface';
 import { MapRegisterService } from './../../service/map-register.service';
-import { Observable } from 'rxjs';
+
 @Component({
   selector: 'app-addmap',
   templateUrl: './addmap.component.html',
@@ -12,6 +12,7 @@ import { Observable } from 'rxjs';
 export class AddmapComponent implements OnInit {
   newMapItem: Map;
   updateMapItem: Map;
+
 
   constructor(private mapregisterservice: MapRegisterService) { }
 

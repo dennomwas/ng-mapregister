@@ -12,6 +12,13 @@ body {
   font-size: 14px !important;
 }
 
+.body-container {
+  margin-top: 20px;
+}
+.side-nav {
+  
+  padding: 0;
+}
 
 /*----------------	color------------------------*/
 

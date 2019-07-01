@@ -12,18 +12,14 @@
   border: none;
 }
 
-/* .btn {
-  border: 1px solid #57889C;
-} */
-
-.btn-primary {
-  border: 1px solid #F1546D;
+.btn {
+  border: 1px solid #717275;
   color: #6D6E7D;
   background-color: transparent;
+  box-shadow: none;
 }
 
-.btn-primary:hover {
-  box-shadow: 0 0 0 0.1rem #F1546D;
+.btn:hover {
   background-color: #F1546D;
-  color: #fff
+  color: #fff;
 }
