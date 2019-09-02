@@ -1,0 +1,76 @@
+<div class="col-lg-12 dark-bg">
+  <div class="row body-container">
+    <div class="col-md-12 table-responsive">
+      <section class="panel">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Serial No</th>
+              <th>Map Name</th>
+              <th>Map Type</th>
+              <th>Area</th>
+              <th>Locality</th>
+              <th>Fr No.</th>
+              <th>Lr No.</th>
+              <th>Sheet No.</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody *ngIf="maps">
+            <tr *ngFor="let map of maps.page_items">
+              <td>{{map.serial_no}}</td>
+              <td>{{map.map_name}}</td>
+              <td>{{map.map_type}}</td>
+              <td>{{map.area}}</td>
+              <td>{{map.locality}}</td>
+              <td>{{map.fr_no}}</td>
+              <td>{{map.lr_no}}</td>
+              <td>{{map.sheet_no}}</td>
+              <td><button type="button" class="btn" (click)="showDetails(map)">View Map</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" *ngIf="selectedMap" (click)="$event.stopPropagation()">
+  <div class="modal-header">
+    <h1 class="title">{{ selectedMap.map_name }}</h1>
+    <span class="close" (click)="closeModal(); toggleConfirm()">&times;</span>
+  </div>
+
+  <div class="modal-body" *ngIf="!confirm">
+    <p>Serial Number: {{selectedMap.serial_no}}</p>
+    <div>
+      <div>
+        <img src="" class="notification-icon">
+        <div class="notification-content">
+          <p>Noma<span> sana</span></p>
+          <p>Noma</p>
+          <p>Noma</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-body" *ngIf="confirm">
+    <p class="confirmation-text">Are you sure you want to delete <span>{{ selectedMap.map_name }}</span>?</p>
+  </div>
+
+  <div class="modal-footer" *ngIf="true">
+    <button class="btn secondary" (click)="confirm? deleteMap(): toggleConfirm()">
+      <span class="btn-text danger">DELETE</span>
+    </button>
+    <button class="btn" (click)="closeModal(); toggleConfirm()">
+      <span class="btn-text">CANCEL</span>
+    </button>
+  </div>
+
+</div>
+<!-- modal -->

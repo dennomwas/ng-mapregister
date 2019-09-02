@@ -1,0 +1,91 @@
+<div class="col-md-12 add-map dark-bg">
+  <div class="row body-container addmap-body">
+    <div class="col-md-8 ">
+      <section class="panel ">
+        <div class="panel-body ">
+          <form [formGroup]="newMap" (ngSubmit)="onSubmit()">
+            <div class="form-group row">
+              <label class="form-label col-md-4" for="inputSuccess">Select Map Type :</label>
+              <select class="form-control col-md-8 drop-down" id="map-type" required formControlName="mapType">
+                <option value="" disabled selected>Choose your option</option>
+                <option *ngFor="let mapType of mapTypes">{{mapType}}</option>
+              </select>
+            </div>
+            <div class="row fade-alert">
+              <div class="col-md-4"></div>
+              <div class="alert alert-danger col-md-8"
+                *ngIf="newMap.controls['mapType'].invalid && (newMap.controls['mapType'].touched || newMap.controls['mapType'].dirty)">
+                <div *ngIf="newMap.controls['mapType'].errors.required ">Map Type is required</div>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="form-label col-md-4" for="map-name">Map Name :</label>
+              <input type="text" class="form-control col-md-8" id="mapName" placeholder="Enter Map Name"
+                formControlName="mapName">
+            </div>
+            <div class="row fade-alert">
+              <div class="col-md-4"></div>
+              <div class="alert alert-danger col-md-8"
+                *ngIf="newMap.controls['mapName'].invalid && (newMap.controls['mapName'].touched || newMap.controls['mapName'].dirty)">
+                <div *ngIf="newMap.controls['mapName'].errors.required ">Map Name is required</div>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="form-label col-md-4" for="area">Area Name :</label>
+              <input type="text" class="form-control col-md-8" placeholder="Enter Area Name" required
+                formControlName="areaName">
+            </div>
+            <div class="row fade-alert">
+              <div class="col-md-4"></div>
+              <div class="alert alert-danger col-md-8"
+                *ngIf="newMap.controls['areaName'].invalid && (newMap.controls['areaName'].touched || newMap.controls['areaName'].dirty)">
+                <div *ngIf="newMap.controls['areaName'].errors.required ">Area Name is required</div>
+              </div>
+            </div>
+
+            <div class="form-group row ">
+              <label class="form-label col-md-4" for="locality">Locality :</label>
+              <input type="text" class="form-control col-md-8" placeholder="Enter Map Locality" required
+                formControlName="locality">
+            </div>
+            <div class="row fade-alert">
+              <div class="col-md-4"></div>
+              <div class="alert alert-danger col-md-8"
+                *ngIf="newMap.controls['locality'].invalid && (newMap.controls['locality'].touched || newMap.controls['locality'].dirty)">
+                <div *ngIf="newMap.controls['locality'].errors.required ">Locality is required</div>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label class="form-label col-md-4" for="lr-no">L.R. Number :</label>
+              <input type="text" class="form-control col-md-8" placeholder="Enter L.R. Number"
+                formControlName="lrNumber">
+            </div>
+
+            <div class="form-group row">
+              <label class="form-label col-md-4" for="fr-no">F.R. Number :</label>
+              <input type="text" class="form-control col-md-8" placeholder="Enter F.R. Number"
+                formControlName="frNumber">
+            </div>
+
+            <div class="form-group row">
+              <label class="form-label col-md-4" for="sheet-no">Sheet Number :</label>
+              <input type="text" class="form-control col-md-8" placeholder="Enter Sheet Number"
+                formControlName="sheetNumber">
+            </div>
+
+            <div class="form-group row col-md-12">
+              <div class="col-md-4"></div>
+              <div class="col-md-8 text-center">
+                <button type="submit" class="btn" name="submit" [disabled]='!newMap.valid'>Add Map</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

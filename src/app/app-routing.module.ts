@@ -1,35 +1,49 @@
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // local imports
-import { MapsComponent } from './components/maps/maps.component';
-import { AddmapComponent } from './components/addmap/addmap.component';
-import { SearchResultsComponent } from './components/search-results/search-results.component';
+import { MapRegistryComponent } from './components/map-registry/map-registry.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { MapsComponent } from './components/map-registry/maps/maps.component';
+import { AddmapComponent } from './components/map-registry/addmap/addmap.component';
+import { SearchResultsComponent } from './components/map-registry/search-results/search-results.component';
+import { from } from 'rxjs';
 
 const routes: Routes = [
   {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
     path: 'map-register',
-    component: MapsComponent
-  },
-  {
-    path: 'map-register/add-map',
-    component: AddmapComponent
-  },
-  {
-    path: 'map-register/update-map/:id',
-    component: AddmapComponent
-  },
-  {
-    path: 'map-register/delete-map/:id',
-    component: MapsComponent
-  },
-  {
-    path: 'map-register/map/:id',
-    component: MapsComponent
-  },
-  {
-    path: 'map-register/search-results',
-    component: SearchResultsComponent
+    component: MapRegistryComponent,
+    children: [
+      {
+        path: 'all-maps',
+        component: MapsComponent,
+      },
+      {
+        path: 'add-map',
+        component: AddmapComponent
+      },
+      {
+        path: 'update-map/:id',
+        component: AddmapComponent
+      },
+      {
+        path: 'delete-map/:id',
+        component: MapsComponent
+      },
+      {
+        path: 'map/:id',
+        component: MapsComponent
+      },
+      {
+        path: 'search-results',
+        component: SearchResultsComponent
+      }
+    ]
   },
   {
     path: '',
@@ -43,7 +57,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { enableTracing: true })],
+  imports: [RouterModule.forRoot(routes, { enableTracing: false })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

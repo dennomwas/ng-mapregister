@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 // local imports
-import { MapRegisterService } from '../../service/map-register.service';
-import { Map } from '../../models/map-interface';
+import { MapRegisterService } from '../../../service/map-register.service';
+import { Map } from '../../../models/map-interface';
 @Component({
   selector: 'app-maps',
   templateUrl: './maps.component.html',
@@ -11,10 +11,12 @@ import { Map } from '../../models/map-interface';
 export class MapsComponent implements OnInit {
 
   constructor(private mapregisterservice: MapRegisterService) { }
-  maps: Map[] = [];
+  maps: any;
   singleMap: Map;
   updateMapItem: Map;
   deleteMapItem: Map;
+  selectedMap: Map;
+  confirm = false;
   // errorMessage: string;
 
   getMap(id: any) {
@@ -33,12 +35,26 @@ export class MapsComponent implements OnInit {
       }, error => {
         console.log(error);
       });
+    this.closeModal();
+  }
+
+  showDetails(map) {
+    this.selectedMap = map;
+  }
+
+  toggleConfirm() {
+    this.confirm = !this.confirm;
+  }
+
+  closeModal() {
+    this.selectedMap = null;
   }
 
   ngOnInit() {
     this.mapregisterservice.getAllMaps()
       .subscribe(response => {
         this.maps = response;
+        console.log('maps', response);
       }, error => {
         console.log(error);
       });

@@ -1,0 +1,223 @@
+.table {
+  color: #6D6E7D;
+  border: none;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: #222840;
+}
+
+.table td,
+.table th {
+  border: none;
+}
+
+.btn {
+  border: 1px solid #717275;
+  color: #6D6E7D;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.btn:hover {
+  background-color: #121533;
+  color: #6D6E7D;
+}
+
+/* ===========Modal=========== */
+.modal {
+  position: absolute;
+  display: block;
+  top: 18em;
+  left: 28%;
+  text-align: center;
+  width: 50%;
+  height: auto;
+  margin: auto;
+  margin-bottom: 4em;
+  box-sizing: border-box;
+  background: #f6f9fc;
+  box-shadow: 0 10px 13px -6px rgba(0, 0, 0, 0.2), 0 20px 31px 3px rgba(0, 0, 0, 0.14), 0 8px 38px 7px rgba(0, 0, 0, 0.12);
+  border: none;
+  border-top: 4px solid #1abc9c;
+  color: #546a83;
+  border-radius: 10px;
+  transition: 0.2s linear;
+}
+
+.modal.confirm {
+  width: 38%;
+}
+
+.modal.confirmation {
+  border-top: 4px solid #da0000;
+}
+
+.modal-header {
+  padding: 0.5em;
+}
+
+.title {
+  display: inline-block;
+  text-align: left;
+  width: 90%;
+  margin: 0.5em 0 0.5em 1em;
+  font-size: 1.2em;
+}
+
+.close {
+  cursor: pointer;
+  font-size: 1.4em;
+  text-align: right;
+}
+
+.modal-body {
+  text-align: left;
+  padding: 2em;
+  background-color: rgb(238, 238, 238);
+  transition: 0.2s linear;
+}
+
+form {
+  transition: 0.2s linear;
+}
+
+.form-field {
+  position: relative;
+  display: inline-block;
+  width: 46%;
+  padding-bottom: 1em;
+}
+
+.form-field:nth-child(even) {
+  padding-left: 2em;
+}
+
+.field-label {
+  position: relative;
+  font-size: 0.85em;
+  font-weight: 700;
+  padding: 0 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.form-img-upload {
+  background: #273647;
+  color: white;
+  padding: 0.8em 1em;
+  border-radius: 10px;
+}
+
+.required::after {
+  position: absolute;
+  content: '*required';
+  font-size: 0.5em;
+  text-shadow: none;
+  color: #900000;
+  right: -4.5em;
+  top: 0.2em;
+}
+
+.form-input {
+  box-sizing: border-box;
+  margin: 0.5em 0 0;
+  width: 100%;
+  padding: 1em;
+  outline: none;
+  border: none;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.8em;
+  color: #546A83;
+  background: rgb(207, 207, 207);
+  border-radius: 10px;
+}
+
+input::placeholder {
+  color: #98A3AD;
+}
+
+select:focus,
+input:focus {
+  background: #F6F9FC;
+}
+
+select.form-input {
+  height: 3.25em;
+  width: 90%;
+  cursor: pointer;
+}
+
+.image-upload {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+}
+
+.error {
+  background: antiquewhite;
+}
+
+span.true {
+  color: #1abc9c;
+}
+
+span.false {
+  color: #da881d;
+}
+
+span.no-data {
+  font-style: italic;
+  color: #ccc;
+}
+
+.confirmation-text {
+  text-align: center;
+  font-size: 1.05em;
+  padding: 1em 1.8em;
+  transition: 0.2s linear;
+  line-height: 1.8em;
+  letter-spacing: 0.01em;
+}
+
+.confirmation-text span {
+  font-weight: 700;
+}
+
+.modal-footer {
+  text-align: right;
+  padding: 0.8em;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  font-size: 0.76em;
+  font-weight: 700;
+  border: none;
+  transition: 0.2s ease;
+}
+
+.btn.primary {
+  margin-right: 2em;
+  background: #26CAE3;
+  padding: 1em 2em;
+  border-radius: 50px;
+  color: white;
+  text-shadow: 0.5px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.btn.primary:hover {
+  background: #4FC4B6;
+}
+
+.btn.secondary {
+  background: none;
+  border: none;
+  color: #273647;
+  padding-right: 3em;
+  box-shadow: none;
+}
+
+.btn.secondary:hover {
+  color: #800000;
+}

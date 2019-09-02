@@ -1,0 +1,9 @@
+    <div class="col-md-12 dark-bg search-input">
+      <form class="navbar-form" [formGroup]="newSearch" (ngSubmit)="onSubmit()">
+        <input type="text" class="form-control" placeholder="Enter Map Name to search" formControlName="searchName">
+      </form>
+      <div class="fade-alert alert alert-danger"
+        *ngIf="newSearch.controls['searchName'].invalid && newSearch.controls['searchName'].dirty">
+        <div *ngIf="newSearch.controls['searchName'].errors.required ">Search Name is required</div>
+      </div>
+    </div>
