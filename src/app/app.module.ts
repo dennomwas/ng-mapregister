@@ -14,6 +14,7 @@ import { AddmapComponent } from './components/map-registry/addmap/addmap.compone
 import { SearchResultsComponent } from './components/map-registry/search-results/search-results.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { MapRegistryComponent } from './components/map-registry/map-registry.component';
+import { RegisterComponent } from './components/auth/register/register.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { MapRegistryComponent } from './components/map-registry/map-registry.com
     AddmapComponent,
     SearchResultsComponent,
     LoginComponent,
-    MapRegistryComponent
+    MapRegistryComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
