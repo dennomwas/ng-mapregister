@@ -36,7 +36,7 @@
   margin: auto;
   margin-bottom: 4em;
   box-sizing: border-box;
-  background: #f6f9fc;
+  background: #121433;
   box-shadow: 0 10px 13px -6px rgba(0, 0, 0, 0.2), 0 20px 31px 3px rgba(0, 0, 0, 0.14), 0 8px 38px 7px rgba(0, 0, 0, 0.12);
   border: none;
   border-top: 4px solid #1abc9c;
@@ -59,22 +59,24 @@
 
 .title {
   display: inline-block;
-  text-align: left;
+  text-align: center;
   width: 90%;
   margin: 0.5em 0 0.5em 1em;
-  font-size: 1.2em;
+  font-size: 1.5em;
+  text-transform: capitalize !important;
 }
 
 .close {
   cursor: pointer;
   font-size: 1.4em;
   text-align: right;
+  padding-right: 2em;
 }
 
 .modal-body {
-  text-align: left;
+  text-align: center;
   padding: 2em;
-  background-color: rgb(238, 238, 238);
+  background-color: #222840;
   transition: 0.2s linear;
 }
 
@@ -213,11 +215,33 @@ button {
 .btn.secondary {
   background: none;
   border: none;
-  color: #273647;
-  padding-right: 3em;
+  color: #6D6E7D;
+  margin-right: 3em;
   box-shadow: none;
+  text-align: center;
 }
 
 .btn.secondary:hover {
-  color: #800000;
+  color: #F1546D;
+  border: 1px solid #F1546D;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+
+.map-details {
+  display: block;
+  line-height: 3em;
+  width: 80%;
+  
+}
+
+.map-row {
+  display: block;
+}
+
+.map-cell {
+  display: inline-block;
+  width: 16em;
 }

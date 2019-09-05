@@ -41,21 +41,69 @@
 <!-- Modal -->
 <div class="modal" *ngIf="selectedMap" (click)="$event.stopPropagation()">
   <div class="modal-header">
-    <h1 class="title">{{ selectedMap.map_name }}</h1>
+    <h1 class="title">{{selectedMap.serial_no}} - {{ selectedMap.map_name }}</h1>
     <span class="close" (click)="closeModal(); toggleConfirm()">&times;</span>
   </div>
 
   <div class="modal-body" *ngIf="!confirm">
-    <p>Serial Number: {{selectedMap.serial_no}}</p>
-    <div>
-      <div>
-        <img src="" class="notification-icon">
-        <div class="notification-content">
-          <p>Noma<span> sana</span></p>
-          <p>Noma</p>
-          <p>Noma</p>
+    <div class="map-details mx-auto">
+      <div class="map-row">
+        <div class="map-cell">
+          Serial Number :
+        </div>
+        <div class="map-cell">
+          {{selectedMap.serial_no}}
         </div>
       </div>
+      <div class="map-row">
+        <div class="map-cell">
+          Map Type :
+        </div>
+        <div class="map-cell">
+          {{selectedMap.map_type}}
+        </div>
+      </div>
+      <div class="map-row">
+        <div class="map-cell">
+          Area :
+        </div>
+        <div class="map-cell">
+          {{selectedMap.area}}
+        </div>
+      </div>
+      <div class="map-row">
+        <div class="map-cell">
+          Locality :
+        </div>
+        <div class="map-cell">
+          {{selectedMap.locality}}
+        </div>
+      </div>
+      <div class="map-row" *ngIf="selectedMap.fr_no">
+        <div class="map-cell">
+          Fr No. :
+        </div>
+        <div class="map-cell">
+          {{selectedMap.fr_no}}
+        </div>
+      </div>
+      <div class="map-row" *ngIf="selectedMap.lr_no">
+        <div class="map-cell">
+          Lr No. :
+        </div>
+        <div class="map-cell">
+          {{selectedMap.lr_no}}
+        </div>
+      </div>
+      <div class="map-row" *ngIf="selectedMap.sheet_no">
+        <div class="map-cell">
+          Sheet No. :
+        </div>
+        <div class="map-cell">
+          {{selectedMap.sheet_no}}
+        </div>
+      </div>
+      
     </div>
   </div>
 
