@@ -42,6 +42,10 @@ const routes: Routes = [
       {
         path: 'search-results',
         component: SearchResultsComponent
+      },
+      {
+        path: 'delete',
+        component: MapsComponent
       }
     ]
   },

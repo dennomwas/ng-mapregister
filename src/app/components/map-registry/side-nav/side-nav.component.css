@@ -25,6 +25,7 @@ ul.sidebar-menu li ul.sub {
 ul.sidebar-menu {
 
   list-style: none;
+  height: 100vh;
 
 }
 
@@ -106,26 +107,18 @@ ul.sidebar-menu li ul.sub li.active a {
 }
 
 ul.sidebar-menu li {
-
   line-height: 20px !important;
 
-  /*margin-bottom: 5px;
-
-    margin-left:10px;
-
-    margin-right:10px;*/
 }
 
-ul.sidebar-menu li:hover{
-
-    border-bottom: 1px solid #688a7e;
-
+ul.sidebar-menu li:hover {
+  border-bottom: 1px solid #688a7e;
 }
 
 ul.sidebar-menu {
 
   line-height: 15px;
-
+  margin: 0;
   /* font-size: 16px; */
 }
 
@@ -186,7 +179,7 @@ ul.sidebar-menu li a:focus {
 
   /*border-radius: 4px;
 
-    -webkit-border-radius: 4px;*/
+  -webkit-border-radius: 4px;*/
 
   -webkit-transition: all 0.3s ease;
 
@@ -240,103 +233,5 @@ ul.sidebar-menu li a:focus i {
 ul.sidebar-menu li.active a i {
 
   color: #fff;
-
-}
-
-
-
-
-
-#sidebar ul>li>a .arrow {
-
-  border-bottom: 4px solid transparent;
-
-  border-left: 4px solid #A0A0A0;
-
-  border-top: 4px solid transparent;
-
-  float: right;
-
-  height: 0;
-
-  margin-right: 10px;
-
-  margin-top: 6px;
-
-  width: 0;
-
-}
-
-#sidebar ul>li>a .menu-arrow {
-
-  float: right;
-
-  margin-right: 8px;
-
-  margin-top: 6px;
-
-}
-
-#sidebar>ul>li>a .arrow.open {
-
-  border-left: 4px solid transparent;
-
-  border-right: 4px solid transparent;
-
-  border-top: 5px solid #A0A0A0;
-
-  float: right;
-
-  height: 0;
-
-  margin-right: 10px;
-
-  margin-top: 8px;
-
-  width: 0;
-
-}
-
-#sidebar ul>li.active>a .arrow,
-#sidebar ul>li>a:hover .arrow,
-#sidebar ul>li>a:focus .arrow {
-
-  float: right;
-
-  margin-top: 6px;
-
-  margin-right: 10px;
-
-  width: 0;
-
-  height: 0;
-
-  border-left: 4px solid #d0d8df;
-
-  border-top: 4px solid transparent;
-
-  border-bottom: 4px solid transparent;
-
-}
-
-#sidebar>ul>li.active>a .arrow.open,
-#sidebar>ul>li>a:hover .arrow.open,
-#sidebar>ul>li>a:focus .arrow.open {
-
-  float: right;
-
-  margin-top: 8px;
-
-  margin-right: 10px;
-
-  width: 0;
-
-  height: 0;
-
-  border-top: 5px solid #d0d8df;
-
-  border-left: 4px solid transparent;
-
-  border-right: 4px solid transparent;
 
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
 // local imports
 import { Map } from '../models/map-interface';
@@ -36,8 +36,14 @@ export class MapRegisterService {
 
   getAllMaps(): Observable<Map[]> {
     const getUrl = `${this.mainUrl}`;
+    return this.http.get<Map[]>(getUrl);
+  }
 
-    return this.http.get<Map[]>(getUrl, this.headers);
+  getMapsByCategory(category: string): Observable<Map[]> {
+    category = category.trim();
+    const queryParam = { params: new HttpParams().set('map-type', category) };
+    return this.http.get<Map[]>(this.mainUrl, queryParam);
+
   }
 
   getOneMap(id: string): Observable<Map> {

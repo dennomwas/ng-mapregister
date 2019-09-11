@@ -32,6 +32,7 @@ export class MapsComponent implements OnInit {
     this.mapregisterservice.deleteMap(id)
       .subscribe(response => {
         this.deleteMapItem = response;
+        console.log('deleted', response);
       }, error => {
         console.log(error);
       });

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 
 // local imports
 import { MapRegisterService } from '../../../service/map-register.service';
+import { Map } from '../../../models/map-interface';
 
 @Component({
   selector: 'app-search',
@@ -25,6 +26,7 @@ export class SearchComponent implements OnInit {
     this.mapregisterservice.searchMap(searchName)
       .subscribe(response => {
         this.newSearch = response;
+        console.log('search results', response);
       }, error => {
         console.log(error);
       });
