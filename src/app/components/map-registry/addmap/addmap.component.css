@@ -9,8 +9,9 @@
   padding-top: 10px;
   text-align: center;
 }
+
 .form-control {
-  color: #35394F;
+  color: #616273;
   background-color: #222840;
   border: none;
 }
@@ -19,12 +20,12 @@
   margin-bottom: 22px;
 }
 
-
 .drop-down {
   color: #6D6E7D;
+  height: 50px;
 }
 
-input  {
+input {
   height: 3.8em;
   padding: 10px;
   line-height: 10px;
@@ -36,9 +37,11 @@ input  {
   background-color: transparent;
   box-shadow: none;
   text-align: center;
+  width: 70%;
+  cursor: pointer;
 }
 
 .btn:hover {
-  background-color: #F1546D;
-  color: #fff;
+  background-color: #232840;
+  color: #6D6E7D;
 }

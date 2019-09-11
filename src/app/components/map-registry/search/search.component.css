@@ -1,0 +1,53 @@
+.navbar-form .form-control {
+
+  /* width: 200px; */
+
+  height: 45px;
+
+  /* background: white url('../img/icons/search-line-icon.png') no-repeat 3px; */
+
+  padding-left: 24px;
+
+  margin-top: 1px;
+
+  background-color: #2B2D4C;
+
+  border: none
+}
+
+.search-input {
+  padding: 20px;
+  margin-bottom: 0;
+}
+
+.fade-alert {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+/* .fade-alert {
+  -webkit-animation: fadeOut 2s forwards;
+  animation: fadeOut 2s forwards;
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+} */

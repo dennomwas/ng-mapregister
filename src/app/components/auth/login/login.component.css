@@ -1,0 +1,71 @@
+.row {
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.img-col {
+  background-image: url(src/assets/img/banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.form-col {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000;
+}
+
+.form-col .logo-img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+
+.input-group {
+  padding-bottom: 2em;
+  width: 40em;
+}
+
+.form-control {
+  height: 4em;
+}
+
+.btn-block {
+  margin-bottom: 1em;
+}
+
+.btn-primary {
+  background-color: #C86F1A;
+  border-color: #C86F1A;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  /* border: none; */
+  border-color: #C86F1A;
+  color: #C86F1A;
+}
+
+.btn-primary:active {
+  color: #fff;
+  background-color: #C86F1A !important;
+  border: none;
+}
+
+.forgot-password {
+  color: #fff;
+}
+
+.forgot-password:hover {
+  color: #C86F1A;
+}
+
+@media only screen and (max-width: 600px) {
+  .form-control {
+    width: 1em;
+  }
+}

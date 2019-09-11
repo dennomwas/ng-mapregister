@@ -2,43 +2,49 @@
 <div class="col-md-12 dark-bg">
   <ul class="sidebar-menu">
     <li>
-      <a routerLink="/map-register" routerLinkActive="active">
+      <a routerLink="/login" routerLinkActive="active">
+        <i class="icon_house_alt"></i>
+        <span>Login</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="all-maps" routerLinkActive="active">
         <i class="icon_house_alt"></i>
         <span>Home</span>
       </a>
     </li>
     <li>
-      <a routerLink="map-register/add-map" routerLinkActive="active">
+      <a routerLink="add-map" routerLinkActive="active">
         <i class="icon_genius"></i>
         <span>Add a Map</span>
       </a>
     </li>
     <li>
-      <a routerLink="map-register/update-map/" routerLinkActive="active">
+      <a routerLink="update-map" routerLinkActive="active">
         <i class="icon_genius"></i>
         <span>Update a Map</span>
       </a>
     </li>
     <li>
-      <a class="" href="chart-chartjs.html">
+      <a [routerLink]="['/map-register']" [queryParams]="{maptype: 'rim-maps'}" routerLinkActive="active">
         <i class="icon_piechart"></i>
         <span>RIM Maps</span>
       </a>
     </li>
     <li>
-      <a class="" href="widgets.html">
+      <a [routerLink]="['/map-register']" [queryParams]="{maptype: 'survey-plans'}" routerLinkActive="active">
         <i class="icon_genius"></i>
         <span>Survey Plans</span>
       </a>
     </li>
     <li>
-      <a class="" href="widgets.html">
+      <a [routerLink]="['/map-register']" [queryParams]="{maptype: 'topo-maps'}" routerLinkActive="active">
         <i class="icon_genius"></i>
         <span>Topo Maps</span>
       </a>
     </li>
     <li>
-      <a routerLink="/map-register" routerLinkActive="active">
+      <a routerLink="all-maps" routerLinkActive="active">
         <i class="icon_genius"></i>
         <span>All Maps</span>
       </a>
