@@ -58,6 +58,7 @@
 
 .forgot-password {
   color: #fff;
+  cursor: pointer;
 }
 
 .forgot-password:hover {
