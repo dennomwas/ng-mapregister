@@ -8,11 +8,15 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { MapsComponent } from './components/map-registry/maps/maps.component';
 import { AddmapComponent } from './components/map-registry/addmap/addmap.component';
 import { SearchResultsComponent } from './components/map-registry/search-results/search-results.component';
-import { from } from 'rxjs';
+import { UpdateMapComponent } from './components/map-registry/update-map/update-map.component';
 
 const routes: Routes = [
   {
     path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'reset-password',
     component: LoginComponent
   },
   {
@@ -29,7 +33,7 @@ const routes: Routes = [
       },
       {
         path: 'update-map/:id',
-        component: AddmapComponent
+        component: UpdateMapComponent
       },
       {
         path: 'delete-map/:id',

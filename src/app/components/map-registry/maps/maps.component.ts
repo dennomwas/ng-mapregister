@@ -9,15 +9,15 @@ import { Map } from '../../../models/map-interface';
   styleUrls: ['./maps.component.css']
 })
 export class MapsComponent implements OnInit {
-
-  constructor(private mapregisterservice: MapRegisterService) { }
-  maps: any;
+    maps: any;
   singleMap: Map;
   updateMapItem: Map;
   deleteMapItem: Map;
   selectedMap: Map;
   confirm = false;
   // errorMessage: string;
+
+  constructor(private mapregisterservice: MapRegisterService) { }
 
   getMap(id: any) {
     this.mapregisterservice.getOneMap(id)

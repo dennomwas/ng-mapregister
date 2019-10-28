@@ -11,6 +11,7 @@ import { Map } from '../models/map-interface';
 export class MapRegisterService {
 
   mainUrl = `https://cors-anywhere.herokuapp.com/https://map-register.herokuapp.com/v1/map-register`;
+  authUrl = `https://cors-anywhere.herokuapp.com/https://map-register.herokuapp.com/v1/auth`;
 
   headers = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -76,19 +77,25 @@ export class MapRegisterService {
     return this.http.put<Map>(updateUrl, mapUpdate, this.headers);
   }
 
-  searchMap(searchName: string) {
-    const searchUrl = `${this.mainUrl}/posts`;
-    const nameToSearch = { searchName };
-
-    return this.http.post(searchUrl, nameToSearch, this.headers);
+  searchMap(nameToSearch: string): Observable<Map[]>  {
+    nameToSearch = nameToSearch.trim();
+    const queryParam = { params: new HttpParams().set('q', nameToSearch) };
+    return this.http.post<Map[]>(this.mainUrl, queryParam, this.headers);
 
   }
 
   login(email: string, password: string) {
-    const loginUrl = `${this.mainUrl}/login`;
+    const loginUrl = `${this.authUrl}/login`;
     const loginData = { email, password };
 
     return this.http.post(loginUrl, loginData, this.headers);
+  }
+
+  resetPassword(email: string) {
+    const resetUrl = `${this.authUrl}/reset-password-link`;
+    const resetData = { email };
+
+    return this.http.post(resetUrl, resetData, this.headers);
   }
 
 }

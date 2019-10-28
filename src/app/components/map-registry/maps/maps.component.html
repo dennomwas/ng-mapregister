@@ -27,7 +27,7 @@
               <td>{{map.lr_no}}</td>
               <td>{{map.sheet_no}}</td>
               <td><button type="button" class="btn" (click)="showDetails(map)">View</button>
-              <td><button type="button" class="btn" (click)="showDetails(map)">Update</button>
+              <td><button type="button" class="btn" [routerLink]="['/map-register/update-map', map.id ]"> Update</button>
               </td>
             </tr>
           </tbody>
@@ -104,7 +104,7 @@
           {{selectedMap.sheet_no}}
         </div>
       </div>
-      
+
     </div>
   </div>
 
@@ -114,7 +114,7 @@
 
   <div class="modal-footer" *ngIf="true">
     <button class="btn secondary" (click)="confirm? deleteMap(): toggleConfirm()">
-      <span class="btn-text danger" >DELETE</span>
+      <span class="btn-text danger">DELETE</span>
     </button>
     <button class="btn" (click)="closeModal(); toggleConfirm()">
       <span class="btn-text">CANCEL</span>

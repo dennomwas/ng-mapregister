@@ -15,6 +15,7 @@ import { SearchResultsComponent } from './components/map-registry/search-results
 import { LoginComponent } from './components/auth/login/login.component';
 import { MapRegistryComponent } from './components/map-registry/map-registry.component';
 import { RegisterComponent } from './components/auth/register/register.component';
+import { UpdateMapComponent } from './components/map-registry/update-map/update-map.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { RegisterComponent } from './components/auth/register/register.component
     LoginComponent,
     MapRegistryComponent,
     RegisterComponent,
+    UpdateMapComponent,
   ],
   imports: [
     BrowserModule,
